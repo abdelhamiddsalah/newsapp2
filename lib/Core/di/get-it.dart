@@ -13,7 +13,7 @@ void initGitIt() {
   getIt.registerLazySingleton<Api_Networking>(() => Api_Networking(createAndSetupDio()));
   getIt.registerLazySingleton<Reponews>(() => Reponews(getIt<Api_Networking>()));
   getIt.registerLazySingleton<NewsCubitCubit>(() => NewsCubitCubit(getIt<Reponews>()));
-  getIt.registerLazySingleton<ThemeCubitCubit>(() => ThemeCubitCubit());
+  getIt.registerFactory<ThemeCubitCubit>(() => ThemeCubitCubit());
   getIt.registerLazySingleton<CartCubit>(() => CartCubit());
   getIt.registerLazySingleton<DetailsCubitCubit>(() => DetailsCubitCubit());
 }

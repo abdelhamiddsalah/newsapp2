@@ -8,7 +8,7 @@ class PaginationCubit extends Cubit<int> {
   }
 
   void nextPage() {
-    if (state < 4) { // Assuming 5 pages (0-4)
+    if (state < 5) { // Assuming 5 pages (0-4)
       emit(state + 1);
     }
   }

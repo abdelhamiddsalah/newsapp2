@@ -52,7 +52,6 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                         myFocusNode.unfocus();
                       });}, icon: Icon(Icons.close, color: Colors.red,)), contentPadding: EdgeInsets.only(bottom: 8/5)  ),
                     )),
-                   
                   ],
                 ),
               ),
@@ -72,7 +71,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(searchwords[index]),
+                          child: Text(searchwords[index], textAlign: TextAlign.center,),
                         ),
                       ),
                     );

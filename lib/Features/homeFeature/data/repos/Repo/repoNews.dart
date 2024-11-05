@@ -14,7 +14,7 @@ class Reponews {
     return response;
   }
 
-   Future<News> getAllNewssorted(String  sortby) async{
+   Future<News> getAllNewssorted(String sortby) async{
     var response =await api_networking.getNewsSortby(sortby);
     return response;
   }

@@ -4,7 +4,7 @@ part 'TopNewsNews.g.dart';
 class TopNews {
   String? status;
   int? totalResults;
-  List<Articles>? articles;
+  List<Articles2>? articles;
 
   TopNews({this.status, this.totalResults, this.articles});
 
@@ -14,7 +14,7 @@ class TopNews {
   Map<String, dynamic> toJson() => _$TopNewsToJson(this);
 }
 @JsonSerializable()
-class Articles {
+class Articles2 {
   Source? source;
   String? author;
   String? title;
@@ -24,7 +24,7 @@ class Articles {
   String? publishedAt;
   String? content;
 
-  Articles(
+  Articles2(
       {this.source,
       this.author,
       this.title,
@@ -34,10 +34,10 @@ class Articles {
       this.publishedAt,
       this.content});
 
-   factory Articles.fromJson(Map<String, dynamic> json) => _$ArticlesFromJson(json);
+   factory Articles2.fromJson(Map<String, dynamic> json) => _$Articles2FromJson(json);
 
   /// Connect the generated [_$PersonToJson] function to the `toJson` method.
-  Map<String, dynamic> toJson() => _$ArticlesToJson(this);
+  Map<String, dynamic> toJson() => _$Articles2ToJson(this);
 }
 @JsonSerializable()
 class Source {

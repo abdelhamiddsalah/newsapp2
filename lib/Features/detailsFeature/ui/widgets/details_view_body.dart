@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:newsapp/Core/Widgets/Loadinwidget.dart';
 import 'package:newsapp/Core/Widgets/MainDrawer.dart';
 import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
@@ -13,7 +14,7 @@ import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 
 class DetailsViewBody extends StatelessWidget {
   final Articles aricle;
-  const DetailsViewBody({Key? key, required this.aricle}) : super(key: key);
+  const DetailsViewBody({super.key, required this.aricle});
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +35,8 @@ class DetailsViewBody extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(state.article.title ?? 'No title',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold)),
-                      Verticalspacing(height: 10),
+                          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                    const  Verticalspacing(height: 10),
                       Stack(children: [
                         ArticleImage(
                           imageUrl: state.article.urlToImage!,
@@ -49,9 +49,8 @@ class DetailsViewBody extends StatelessWidget {
                               CustomIconButton(
                                 icon: Icons.bookmark,
                                 onPressed: () {
-                                  context
-                                      .read<CartCubit>()
-                                      .addToCart(state.article);
+                                  context.read<CartCubit>().addToCart(state.article);
+                                    EasyLoading.showSuccess('Added To Cart!');
                                 },
                               ),
                               const SizedBox(width: 10),

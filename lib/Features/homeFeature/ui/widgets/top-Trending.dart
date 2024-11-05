@@ -15,22 +15,25 @@ class TopTrendingWidget extends StatelessWidget {
       child: Material(
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(12.0),
-        child: InkWell(
-          onTap: () {},
-          child: BlocBuilder<NewsCubitCubit, NewsCubitState>(
-            builder: (context, state) {
-              if (state is GetTopNews) {
-                return SizedBox(
-                  height: size.height * 0.5,
-                  child: Swiper(
-                    layout: SwiperLayout.STACK,
-                    autoplay: true,
-                    autoplayDelay: 8000,
-                    itemWidth: size.width*0.8,
-                   viewportFraction: 0.9,
-                    itemCount: state.newslist.articles!.length,
-                    itemBuilder: (context, index) {
-                      return Container(
+        child: BlocBuilder<NewsCubitCubit, NewsCubitState>(
+          builder: (context, state) {
+            if (state is GetTopNews) {
+              return SizedBox(
+                height: size.height * 0.5,
+                child: Swiper(
+                  layout: SwiperLayout.STACK,
+                  autoplay: true,
+                  autoplayDelay: 8000,
+                  itemWidth: size.width * 0.8,
+                  viewportFraction: 0.9,
+                  itemCount: state.newslist.articles!.length,
+                  itemBuilder: (context, index) {
+                    final article = state.newslist.articles![index];
+                    return InkWell(
+                      onTap: () {
+                       
+                      },
+                      child: Container(
                         color: Theme.of(context).cardColor,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,27 +43,30 @@ class TopTrendingWidget extends StatelessWidget {
                               child: FancyShimmerImage(
                                 boxFit: BoxFit.fill,
                                 errorWidget: Image.asset('assets/images/empty_image.png'),
-                                imageUrl: state.newslist.articles![index].urlToImage.toString(),
+                                imageUrl: article.urlToImage ?? '',
                                 height: size.height * 0.33,
                                 width: double.infinity,
                               ),
                             ),
-                          const  SizedBox(height: 10,),
+                            const SizedBox(height: 10),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
+                                article.title ?? '',
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 2,
-                                state.newslist.articles![index].title.toString(),
-                                style:  TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 14, color: Theme.of(context).textTheme.bodyLarge!.color),
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                  color: Theme.of(context).textTheme.bodyLarge!.color,
+                                ),
                               ),
                             ),
                             Row(
                               children: [
                                 IconButton(
-                                  onPressed: () {},
-                                  icon:  Icon(
+                                  onPressed: () {}, // Add your onPressed action here
+                                  icon: Icon(
                                     Icons.link,
                                     color: Theme.of(context).textSelectionTheme.cursorColor,
                                   ),
@@ -70,15 +76,15 @@ class TopTrendingWidget extends StatelessWidget {
                             ),
                           ],
                         ),
-                      );
-                    },
-                  ),
-                );
-              } else {
-                return const Center(child: CircularProgressIndicator());
-              }
-            },
-          ),
+                      ),
+                    );
+                  },
+                ),
+              );
+            } else {
+              return const Center(child: CircularProgressIndicator());
+            }
+          },
         ),
       ),
     );

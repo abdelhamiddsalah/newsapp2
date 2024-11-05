@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Features/homeFeature/ui/widgets/search_view_body.dart';
+import 'package:newsapp/Features/searchFeature/ui/widgets/search_view_body.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});

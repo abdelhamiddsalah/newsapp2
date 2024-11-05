@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newsapp/Features/homeFeature/ui/Search_view.dart';
+import 'package:newsapp/Features/searchFeature/ui/search_view.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Appbarwidget extends StatelessWidget implements PreferredSizeWidget{

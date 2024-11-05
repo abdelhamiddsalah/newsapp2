@@ -8,12 +8,12 @@ import 'package:newsapp/Core/Services/Api_Networking.dart';
 
 class ToptrendingView extends StatelessWidget {
   const ToptrendingView({super.key});
-
+ 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => NewsCubitCubit(Reponews(Api_Networking(Dio())))..emitGetAllTopnews(),
-      child: const TopTrendingWidget(),
+      child:const  TopTrendingWidget(),
     );
   }
 }

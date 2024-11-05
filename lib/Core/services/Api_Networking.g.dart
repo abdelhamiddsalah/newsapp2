@@ -8,15 +8,12 @@ part of 'Api_Networking.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
 class ParseErrorLogger {
-  void logError(Object error, StackTrace stackTrace, RequestOptions options) {
-    // Implement your logging logic here.
-    // You could print to console, log to a file, or send to an error reporting service.
-    print('Error: $error');
-    print('StackTrace: $stackTrace');
-    print('Request Options: ${options.uri}');
-  }
-}
-
+  void logError(Object error, StackTrace stackTrace, RequestOptions requestOptions) {
+    // Implement your error logging logic here
+    print('Error occurred: $error');
+    print('Stack trace: $stackTrace');
+    print('Request: ${requestOptions.method} ${requestOptions.path}');
+  }}
 class _Api_Networking implements Api_Networking {
   _Api_Networking(
     this._dio, {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:newsapp/Core/routes/app_routes.dart';
@@ -18,8 +19,25 @@ void main() async {
   Hive.registerAdapter(CartItemAdapter());
   await Hive.openBox<CartItem>('cartBox');
   await Hive.openBox('settingsBox');
-  initGitIt(); // Ensure this function registers required services in GetIt
+  initGitIt(); 
+  configLoading();// Ensure this function registers required services in GetIt
   runApp(MyApp());
+}
+
+void configLoading() {
+  EasyLoading.instance
+    ..displayDuration = const Duration(milliseconds: 2000)
+    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
+    ..loadingStyle = EasyLoadingStyle.dark
+    ..indicatorSize = 45.0
+    ..radius = 10.0
+    ..progressColor = Colors.yellow
+    ..backgroundColor = Colors.green
+    ..indicatorColor = Colors.yellow
+    ..textColor = Colors.yellow
+    ..maskColor = Colors.blue.withOpacity(0.5)
+    ..userInteractions = false
+    ..dismissOnTap = false;
 }
 
 class MyApp extends StatelessWidget {
@@ -29,7 +47,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => getIt<ThemeCubitCubit>()),
+        BlocProvider(create: (context) => ThemeCubitCubit()),
         BlocProvider(create: (context) => CartCubit()),
       ],
       child: BlocBuilder<ThemeCubitCubit, ThemeCubitState>(
@@ -40,6 +58,7 @@ class MyApp extends StatelessWidget {
                 ? Apptheme.themedark
                 : Apptheme.themelight,
             initialRoute: Routes.homeView,
+             builder: EasyLoading.init(), 
             onGenerateRoute: AppRouting().generateRoute,
             debugShowCheckedModeBanner: false,
           );

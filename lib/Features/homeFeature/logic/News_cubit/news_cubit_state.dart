@@ -20,6 +20,11 @@ class GetAllnewsSorted extends NewsCubitState{
   GetAllnewsSorted({required this.newslist});
 }
 
+class GetAllnewsSortedpage extends NewsCubitState{
+  final News newslist;
+  GetAllnewsSortedpage({required this.newslist});
+}
+
 class GetAllNewsLoading extends NewsCubitState{}
 
 

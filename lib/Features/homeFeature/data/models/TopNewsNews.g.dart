@@ -10,7 +10,7 @@ TopNews _$TopNewsFromJson(Map<String, dynamic> json) => TopNews(
       status: json['status'] as String?,
       totalResults: (json['totalResults'] as num?)?.toInt(),
       articles: (json['articles'] as List<dynamic>?)
-          ?.map((e) => Articles.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => Articles2.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -20,7 +20,7 @@ Map<String, dynamic> _$TopNewsToJson(TopNews instance) => <String, dynamic>{
       'articles': instance.articles,
     };
 
-Articles _$ArticlesFromJson(Map<String, dynamic> json) => Articles(
+Articles2 _$Articles2FromJson(Map<String, dynamic> json) => Articles2(
       source: json['source'] == null
           ? null
           : Source.fromJson(json['source'] as Map<String, dynamic>),
@@ -33,7 +33,7 @@ Articles _$ArticlesFromJson(Map<String, dynamic> json) => Articles(
       content: json['content'] as String?,
     );
 
-Map<String, dynamic> _$ArticlesToJson(Articles instance) => <String, dynamic>{
+Map<String, dynamic> _$Articles2ToJson(Articles2 instance) => <String, dynamic>{
       'source': instance.source,
       'author': instance.author,
       'title': instance.title,

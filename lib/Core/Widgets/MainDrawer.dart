@@ -27,7 +27,7 @@ class MainDrawer extends StatelessWidget {
                 color: Theme.of(context).iconTheme.color,
               ),
               onTap: () {
-                Navigator.pushNamed(context, Routes.homeView);
+               Navigator.pop(context);
               },
             ),
             Listtilee(
