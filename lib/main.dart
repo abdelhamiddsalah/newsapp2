@@ -6,7 +6,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:newsapp/Core/routes/app_routes.dart';
 import 'package:newsapp/Core/routes/routes.dart';
 import 'package:newsapp/Core/di/get-it.dart';
-import 'package:newsapp/Core/styles/App-theme.dart';
+import 'package:newsapp/Core/styles/app-theme.dart';
 import 'package:newsapp/Features/homeFeature/data/models/articleAdapter.dart';
 import 'package:newsapp/Features/homeFeature/data/models/cartitrmAdapter.dart';
 import 'package:newsapp/Features/homeFeature/logic/theme_cubit/theme_cubit_cubit.dart';
