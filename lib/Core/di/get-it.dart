@@ -9,22 +9,21 @@ import 'package:newsapp/Features/homeFeature/logic/theme_cubit/theme_cubit_cubit
 
 final getIt = GetIt.instance;
 
-void initGitIt() {
+Future<void> initGitIt() async {
   getIt.registerLazySingleton<Api_Networking>(() => Api_Networking(createAndSetupDio()));
   getIt.registerLazySingleton<Reponews>(() => Reponews(getIt<Api_Networking>()));
-  getIt.registerLazySingleton<NewsCubitCubit>(() => NewsCubitCubit(getIt<Reponews>()));
+  getIt.registerFactory<NewsCubitCubit>(() => NewsCubitCubit(getIt<Reponews>()));
   getIt.registerFactory<ThemeCubitCubit>(() => ThemeCubitCubit());
   getIt.registerLazySingleton<CartCubit>(() => CartCubit());
   getIt.registerLazySingleton<DetailsCubitCubit>(() => DetailsCubitCubit());
-   //getIt.registerSingleton<Articles>(article);
 }
 
 
 Dio createAndSetupDio() {
   Dio dio = Dio();
 
-  dio.options.connectTimeout = Duration(seconds: 20);
-  dio.options.receiveTimeout = Duration(seconds: 10);
+  dio.options.connectTimeout = const Duration(seconds: 20);
+  dio.options.receiveTimeout = const Duration(seconds: 10);
 
   dio.interceptors.add(LogInterceptor(
     request: true,

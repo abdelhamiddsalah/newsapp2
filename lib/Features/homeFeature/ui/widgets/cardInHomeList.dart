@@ -1,10 +1,12 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
 import 'package:newsapp/Core/widgets/recordingTime.dart';
-import 'package:newsapp/Core/widgets/verticalSpacing.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/imageInHomeInlistview.dart';
 import 'package:newsapp/Core/widgets/rowInhomeinlistview.dart';
 
+// ignore: camel_case_types
 class cardInHomeList extends StatelessWidget {
   const cardInHomeList({
     super.key,

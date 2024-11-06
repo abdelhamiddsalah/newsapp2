@@ -21,6 +21,10 @@ class PaginationWidget extends StatelessWidget {
                         context.read<NewsCubitCubit>().emitGetAllTopnewssortdbypage(updatedPage);
                       }
                     : null,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: const StadiumBorder(),
+                ),
                 child: Text(
                   'Prev',
                   style: TextStyle(
@@ -28,10 +32,6 @@ class PaginationWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
                   ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  shape: const StadiumBorder(),
                 ),
               );
             },
@@ -89,6 +89,10 @@ class PaginationWidget extends StatelessWidget {
                         context.read<NewsCubitCubit>().emitGetAllTopnewssortdbypage(updatedPage);
                       }
                     : null,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: const StadiumBorder(),
+                ),
                 child: Text(
                   'Next',
                   style: TextStyle(
@@ -96,10 +100,6 @@ class PaginationWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
                   ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  shape: const StadiumBorder(),
                 ),
               );
             },

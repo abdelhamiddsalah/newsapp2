@@ -9,14 +9,12 @@ class Listtilee extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListTile(
-        title: Text(
-          title, style: TextStyle(color: Theme.of(context).textTheme.bodyMedium?.color),),
-        leading: leading,
-        onTap: onTap,
-        trailing: trailing,
-      ),
+    return ListTile(
+      title: Text(
+        title, style: TextStyle(color: Theme.of(context).textTheme.bodyMedium?.color),),
+      leading: leading,
+      onTap: onTap,
+      trailing: trailing,
     );
   }
 }

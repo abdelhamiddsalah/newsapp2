@@ -8,6 +8,7 @@ import 'package:retrofit/http.dart';
 part 'Api_Networking.g.dart';
 
 @RestApi(baseUrl:'https://newsapi.org/v2/')
+// ignore: camel_case_types
 abstract class Api_Networking {
   factory Api_Networking(Dio dio, {String? baseUrl}) = _Api_Networking;
 

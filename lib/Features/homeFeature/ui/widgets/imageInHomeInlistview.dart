@@ -2,6 +2,7 @@ import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 
+// ignore: camel_case_types
 class imageInHomeInlistview extends StatelessWidget {
   const imageInHomeInlistview({
     super.key,
@@ -13,7 +14,7 @@ class imageInHomeInlistview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderRadius:const BorderRadius.all(Radius.circular(10)),
       child: FancyShimmerImage(
         height: 90,
         width: 90,

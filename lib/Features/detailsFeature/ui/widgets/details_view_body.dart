@@ -4,7 +4,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:newsapp/Core/Widgets/Loadinwidget.dart';
 import 'package:newsapp/Core/Widgets/MainDrawer.dart';
 import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
-import 'package:newsapp/Features/detailsFeature/logic/Cart_cubit/cartcubit_cubit.dart';
+import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
 import 'package:newsapp/Features/detailsFeature/logic/Details_cubit/details_cubit_cubit.dart';
 import 'package:newsapp/Features/detailsFeature/ui/widgets/IconInDetails.dart';
 import 'package:newsapp/Features/detailsFeature/ui/widgets/ImageInDetails.dart';

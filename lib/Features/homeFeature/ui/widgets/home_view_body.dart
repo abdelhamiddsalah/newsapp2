@@ -5,12 +5,12 @@ import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
 import 'package:newsapp/Core/enums/ThemeStates.dart';
 import 'package:newsapp/Features/homeFeature/logic/PageCubit/page_cubit_cubit.dart';
 import 'package:newsapp/Features/homeFeature/logic/newsState/news_state_cubit.dart';
-import 'package:newsapp/Features/homeFeature/ui/TopTrending_view.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/AppbarInhome.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/DropDownInhome.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/PaesNumbersInhome.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/TitelsInHome.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/listviewArticlesInHome.dart';
+import 'package:newsapp/Features/top_trending_feature/ui/topTrending_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

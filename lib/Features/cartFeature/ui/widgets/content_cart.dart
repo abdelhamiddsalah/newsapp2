@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newsapp/Core/Widgets/RecordingTime.dart';
 import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
 import 'package:newsapp/Core/widgets/rowInhomeinlistview.dart';
-import 'package:newsapp/Features/detailsFeature/logic/Cart_cubit/cartcubit_cubit.dart';
+import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
 import 'package:newsapp/Features/revelncyFeature/ui/widgets/imageinSorting.dart';
 
 // ignore: camel_case_types

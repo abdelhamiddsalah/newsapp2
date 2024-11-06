@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-import 'package:newsapp/Features/detailsFeature/logic/Cart_cubit/cartcubit_cubit.dart';
+import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 
 class CartItemAdapter extends TypeAdapter<CartItem> {

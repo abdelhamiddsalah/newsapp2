@@ -25,7 +25,7 @@ class Appbarwidget extends StatelessWidget implements PreferredSizeWidget{
       context,
       PageTransition(
         type: PageTransitionType.rightToLeft,
-        child: SearchView(),
+        child:const SearchView(),
         inheritTheme: true,
         ctx: context),
 );
