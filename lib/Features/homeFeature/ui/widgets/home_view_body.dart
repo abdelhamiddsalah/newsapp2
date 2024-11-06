@@ -56,13 +56,13 @@ class HomeViewBody extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Verticalspacing(height: 15),
+                    const verticalspacing(height: 15),
                     if (newsType == newsapp.Allnews)
                       BlocProvider(
                         create: (context) => PaginationCubit(),
                         child: PaginationWidget(),
                       ),
-                    const Verticalspacing(height: 10),
+                    const verticalspacing(height: 10),
                     if (newsType == newsapp.Allnews)
                       const Align(
                         alignment: Alignment.topRight,
@@ -71,7 +71,7 @@ class HomeViewBody extends StatelessWidget {
                           child: Dropdowninhome(),
                         ),
                       ),
-                    const Verticalspacing(height: 10),
+                    const verticalspacing(height: 10),
                     if (newsType == newsapp.Allnews)
                       const ListViewArticlesInHome()
                     else

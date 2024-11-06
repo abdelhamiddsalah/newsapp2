@@ -25,7 +25,7 @@ class ArticleSection extends StatelessWidget {
             fontSize: 19,
           ),
         ),
-      const  Verticalspacing(height: 10),
+      const  verticalspacing(height: 10),
         Text(content, style: const TextStyle(fontSize: 15)),
       ],
     );

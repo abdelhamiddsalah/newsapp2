@@ -13,7 +13,7 @@ class Draweheader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Flexible(child: Image.asset('assets/images/newspaper.png', height: 60,width: 60,)),
-       const Verticalspacing(height: 20),
+       const verticalspacing(height: 20),
         Text('News App',style: GoogleFonts.lobster(fontWeight: FontWeight.bold, fontSize: 20)),
       ],
     );

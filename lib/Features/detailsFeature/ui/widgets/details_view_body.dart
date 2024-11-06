@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:newsapp/Core/Widgets/Loadinwidget.dart';
 import 'package:newsapp/Core/Widgets/MainDrawer.dart';
-import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
+import 'package:newsapp/Core/widgets/verticalSpacing.dart';
 import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
 import 'package:newsapp/Features/detailsFeature/logic/Details_cubit/details_cubit_cubit.dart';
 import 'package:newsapp/Features/detailsFeature/ui/widgets/IconInDetails.dart';
@@ -36,7 +36,7 @@ class DetailsViewBody extends StatelessWidget {
                     children: [
                       Text(state.article.title ?? 'No title',
                           style:const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                    const  Verticalspacing(height: 10),
+                    const  verticalspacing(height: 10),
                       Stack(children: [
                         ArticleImage(
                           imageUrl: state.article.urlToImage!,
@@ -69,12 +69,12 @@ class DetailsViewBody extends StatelessWidget {
                           ),
                         ),
                       ]),
-                      const Verticalspacing(height: 22),
+                      const verticalspacing(height: 22),
                       ArticleSection(
                         title: 'Description',
                         content: state.article.description ?? 'No description',
                       ),
-                      const Verticalspacing(height: 9),
+                      const verticalspacing(height: 9),
                       ArticleSection(
                         title: 'Content',
                         content: state.article.content ?? 'No content',

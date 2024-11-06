@@ -41,9 +41,9 @@ class content_cart extends StatelessWidget {
                     style: const TextStyle(
                         fontWeight: FontWeight.bold),
                   ),
-                  const Verticalspacing(height: 6),
+                  const verticalspacing(height: 6),
                   const RecordingTime(),
-                  const Verticalspacing(height: 6),
+                  const verticalspacing(height: 6),
                   const RowInListViewInHome(),
                   IconButton(
                     icon: const Icon(Icons.remove),
