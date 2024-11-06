@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';
 
 class TopTrendingWidget extends StatelessWidget {
-  const TopTrendingWidget({Key? key}) : super(key: key);
+  const TopTrendingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

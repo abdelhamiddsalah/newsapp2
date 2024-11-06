@@ -40,7 +40,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                     IconButton(onPressed: (){
                       myFocusNode.unfocus();
                       Navigator.pop(context);    
-                    }, icon: Icon(Icons.arrow_back_ios_new)),
+                    }, icon: const Icon(Icons.arrow_back_ios_new)),
                     Flexible(child: TextField(
                       focusNode: myFocusNode,
                       controller: textcontroller,
@@ -50,7 +50,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                       decoration: InputDecoration(hintText: 'Search', enabledBorder: InputBorder.none, focusedBorder: InputBorder.none,
                       suffix: IconButton(onPressed: (){textcontroller.clear();setState(() {
                         myFocusNode.unfocus();
-                      });}, icon: Icon(Icons.close, color: Colors.red,)), contentPadding: EdgeInsets.only(bottom: 8/5)  ),
+                      });}, icon: const Icon(Icons.close, color: Colors.red,)), contentPadding: const EdgeInsets.only(bottom: 8/5)  ),
                     )),
                   ],
                 ),
@@ -64,7 +64,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       child: Container(
-                        margin: EdgeInsets.all(4),
+                        margin: const EdgeInsets.all(4),
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.black),
                           borderRadius: BorderRadius.circular(30)

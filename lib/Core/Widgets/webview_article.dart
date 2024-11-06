@@ -15,7 +15,6 @@ class WebviewDetails extends StatefulWidget {
   @override
   State<WebviewDetails> createState() => _WebviewDetailsState();
 }
-
 class _WebviewDetailsState extends State<WebviewDetails> {
   late WebViewController _controller;
 
@@ -25,7 +24,6 @@ class _WebviewDetailsState extends State<WebviewDetails> {
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted);
   }
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -39,9 +37,7 @@ class _WebviewDetailsState extends State<WebviewDetails> {
               if (url == null || url.isEmpty) {
                 return const Center(child: Text('No link available'));
               }
-
               _controller.loadRequest(Uri.parse(url));
-
               return WebViewWidget(controller: _controller);
             },
           ),

@@ -5,17 +5,18 @@ import 'package:newsapp/Features/detailsFeature/ui/details_view.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/cardInHomeList.dart';
 
+
 class ListViewArticlesInHome extends StatelessWidget {
   const ListViewArticlesInHome({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //final articleNews=context.dependOnInheritedWidgetOfExactType<StateInherted>();
     return Expanded(
       child: BlocBuilder<NewsCubitCubit, NewsCubitState>(
         builder: (context, state) {
           if (state is GetAllNews) {
             final articles = state.newslist.articles; // Normal news list
-
             return ListView.builder(
               itemCount: articles?.length ?? 0, // Safe access
               itemBuilder: (context, index) {

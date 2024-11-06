@@ -6,7 +6,7 @@ import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
 import 'package:newsapp/Features/detailsFeature/ui/Details_view.dart';
 import 'package:newsapp/Core/Widgets/RecordingTime.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';
-import 'package:newsapp/Features/homeFeature/ui/widgets/rowInhomeinlistview.dart';
+import 'package:newsapp/Core/widgets/rowInhomeinlistview.dart';
 import 'package:newsapp/Features/revelncyFeature/ui/widgets/imageinSorting.dart';
 
 class Revelncy extends StatelessWidget {
@@ -47,8 +47,8 @@ class Revelncy extends StatelessWidget {
                           ),
                           Container(
                             color: Theme.of(context).cardColor,
-                            padding: EdgeInsets.all(10),
-                            margin: EdgeInsets.all(10),
+                            padding:const EdgeInsets.all(10),
+                            margin:const EdgeInsets.all(10),
                             child: Row(
                               children: [ArticleImagesorting(imageUrl: article.urlToImage),
                               const  SizedBox(width: 10),
@@ -60,12 +60,12 @@ class Revelncy extends StatelessWidget {
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
                                         article.title ?? 'No title available',
-                                        style: TextStyle(fontWeight: FontWeight.bold),
+                                        style:const TextStyle(fontWeight: FontWeight.bold),
                                       ),
-                                      Verticalspacing(height: 6),
-                                     RecordingTime(),
-                                      Verticalspacing(height: 6),
-                                     RowInlistviewinHome(),
+                                    const  Verticalspacing(height: 6),
+                                    const RecordingTime(),
+                                     const Verticalspacing(height: 6),
+                                    const RowInListViewInHome(),
                                     ],
                                   ),
                                 ),
@@ -81,10 +81,11 @@ class Revelncy extends StatelessWidget {
             ),
           );
         }
-        return LoadingWidgget();
+        return const LoadingWidgget();
       },
     );
   }
+  // ignore: non_constant_identifier_names
   Container ContainerMethod(BuildContext context) {
     return Container(
                           height: 60,

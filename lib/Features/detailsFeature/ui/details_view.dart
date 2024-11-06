@@ -5,12 +5,13 @@ import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 class DetailsView extends StatelessWidget {
   final Articles article;
 
-  const DetailsView({Key? key, required this.article}) : super(key: key);
+  const DetailsView({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
-      body: DetailsViewBody(aricle: article,), // No need to pass providers here
+      body: DetailsViewBody(article: article,), // No need to pass providers here
     );
   }
 }

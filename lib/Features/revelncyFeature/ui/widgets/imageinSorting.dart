@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ArticleImagesorting extends StatelessWidget {
   final String? imageUrl;
 
-  const ArticleImagesorting({Key? key, required this.imageUrl}) : super(key: key);
+  const ArticleImagesorting({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {

@@ -9,17 +9,17 @@ import 'package:newsapp/Features/detailsFeature/logic/Details_cubit/details_cubi
 import 'package:newsapp/Features/detailsFeature/ui/widgets/IconInDetails.dart';
 import 'package:newsapp/Features/detailsFeature/ui/widgets/ImageInDetails.dart';
 import 'package:newsapp/Features/detailsFeature/ui/widgets/TextsInDetails.dart';
-import 'package:newsapp/Features/detailsFeature/ui/widgets/webview_article.dart';
+import 'package:newsapp/Core/widgets/webview_article.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 
 class DetailsViewBody extends StatelessWidget {
-  final Articles aricle;
-  const DetailsViewBody({super.key, required this.aricle});
+  final Articles article;
+  const DetailsViewBody({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => DetailsCubitCubit()..loadArticleDetails(aricle),
+      create: (context) => DetailsCubitCubit()..loadArticleDetails(article),
       child: BlocBuilder<DetailsCubitCubit, DetailsCubitState>(
         builder: (context, state) {
           if (state is ArticleDetailsLoaded) {
@@ -35,7 +35,7 @@ class DetailsViewBody extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(state.article.title ?? 'No title',
-                          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                          style:const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                     const  Verticalspacing(height: 10),
                       Stack(children: [
                         ArticleImage(
@@ -61,7 +61,7 @@ class DetailsViewBody extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => WebviewDetails(
-                                                article: aricle,
+                                                article: article,
                                               )));
                                 }, // Implement share functionality
                               ),
@@ -85,7 +85,7 @@ class DetailsViewBody extends StatelessWidget {
               ),
             );
           } else {
-            return LoadingWidgget();
+            return const LoadingWidgget();
           }
         },
       ),

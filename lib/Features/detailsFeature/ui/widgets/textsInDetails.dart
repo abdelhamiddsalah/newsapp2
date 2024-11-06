@@ -7,10 +7,10 @@ class ArticleSection extends StatelessWidget {
   final String content;
 
   const ArticleSection({
-    Key? key,
+    super.key,
     required this.title,
     required this.content,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class ArticleSection extends StatelessWidget {
             fontSize: 19,
           ),
         ),
-        Verticalspacing(height: 10),
+      const  Verticalspacing(height: 10),
         Text(content, style: const TextStyle(fontSize: 15)),
       ],
     );

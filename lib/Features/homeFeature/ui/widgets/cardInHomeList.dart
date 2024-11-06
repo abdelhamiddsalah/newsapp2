@@ -3,7 +3,7 @@ import 'package:newsapp/Core/widgets/recordingTime.dart';
 import 'package:newsapp/Core/widgets/verticalSpacing.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/imageInHomeInlistview.dart';
-import 'package:newsapp/Features/homeFeature/ui/widgets/rowInhomeinlistview.dart';
+import 'package:newsapp/Core/widgets/rowInhomeinlistview.dart';
 
 class cardInHomeList extends StatelessWidget {
   const cardInHomeList({
@@ -36,8 +36,8 @@ class cardInHomeList extends StatelessWidget {
             ),
             Container(
               color: Theme.of(context).cardColor,
-              padding: EdgeInsets.all(10),
-              margin: EdgeInsets.all(10),
+              padding:const EdgeInsets.all(10),
+              margin:const EdgeInsets.all(10),
               child: Row(
                 children: [
                   imageInHomeInlistview(article: article),
@@ -55,7 +55,7 @@ class cardInHomeList extends StatelessWidget {
                         const Verticalspacing(height: 6),
                         const  RecordingTime(),
                         const Verticalspacing(height: 6),
-                        const RowInlistviewinHome(),
+                        const RowInListViewInHome(),
                       ],
                     ),
                   ),

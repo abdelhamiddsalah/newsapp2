@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:newsapp/Core/Services/Api_Networking.dart';
-import 'package:newsapp/Features/detailsFeature/logic/cart_cubit/cartcubit_cubit.dart';
+import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
 import 'package:newsapp/Features/detailsFeature/logic/details_cubit/details_cubit_cubit.dart';
 import 'package:newsapp/Features/homeFeature/data/repos/Repo/RepoNews.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';
@@ -16,6 +16,7 @@ void initGitIt() {
   getIt.registerFactory<ThemeCubitCubit>(() => ThemeCubitCubit());
   getIt.registerLazySingleton<CartCubit>(() => CartCubit());
   getIt.registerLazySingleton<DetailsCubitCubit>(() => DetailsCubitCubit());
+   //getIt.registerSingleton<Articles>(article);
 }
 
 
