@@ -50,6 +50,7 @@ class DetailsViewBody extends StatelessWidget {
                                 icon: Icons.bookmark,
                                 onPressed: () {
                                   context.read<CartCubit>().addToCart(state.article);
+                                  EasyLoading.dismiss();
                                     EasyLoading.showSuccess('Added To Cart!');
                                 },
                               ),
