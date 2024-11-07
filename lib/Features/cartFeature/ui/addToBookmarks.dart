@@ -25,7 +25,7 @@ class CartView extends StatelessWidget {
                   itemCount: cartItems.length,
                   itemBuilder: (context, index) {
                     final item = cartItems[index];
-                    return ContentCart(item: item);
+                    return content_cart(item: item);
                   },
                 ),
               ),
