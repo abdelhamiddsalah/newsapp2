@@ -17,7 +17,6 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return BlocProvider(
       create: (context) => NewsStateCubit()..changeNewsType(newsapp.Allnews),
       child: Scaffold(
@@ -58,24 +57,28 @@ class HomeViewBody extends StatelessWidget {
                     ),
                     const verticalspacing(height: 15),
                     if (newsType == newsapp.Allnews)
-                      BlocProvider(
-                        create: (context) => PaginationCubit(),
-                        child: PaginationWidget(),
-                      ),
-                    const verticalspacing(height: 10),
-                    if (newsType == newsapp.Allnews)
-                      const Align(
-                        alignment: Alignment.topRight,
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          child: Dropdowninhome(),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            BlocProvider(
+                              create: (context) => PaginationCubit(),
+                              child:  PaginationWidget(),
+                            ),
+                            const verticalspacing(height: 10),
+                            const Align(
+                              alignment: Alignment.topRight,
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 10),
+                                child: Dropdowninhome(),
+                              ),
+                            ),
+                            const verticalspacing(height: 10),
+                            Expanded(child: const ListViewArticlesInHome()),
+                          ],
                         ),
-                      ),
-                    const verticalspacing(height: 10),
-                    if (newsType == newsapp.Allnews)
-                      const ListViewArticlesInHome()
+                      )
                     else
-                      const ToptrendingView(),
+                      const Expanded(child: ToptrendingView()),
                   ],
                 );
               },

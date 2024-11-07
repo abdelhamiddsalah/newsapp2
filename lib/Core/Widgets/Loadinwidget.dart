@@ -1,14 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
-class LoadingWidgget extends StatelessWidget {
-  const LoadingWidgget({
-    super.key,
-  });
+class LoadingWidget extends StatefulWidget {
+  const LoadingWidget({Key? key}) : super(key: key);
+
+  @override
+  _LoadingWidgetState createState() => _LoadingWidgetState();
+}
+
+class _LoadingWidgetState extends State<LoadingWidget> {
+  @override
+  void initState() {
+    super.initState();
+    startLoading();
+  }
+
+  void startLoading() async {
+    EasyLoading.show(status: 'Loading...');
+    
+    // قم بتنفيذ مهامك هنا
+    await Future.delayed(Duration(seconds: 2));
+    
+    // إخفاء التحميل بعد الانتهاء
+    EasyLoading.dismiss();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: CircularProgressIndicator()),
-    );
+    return const Scaffold(); // بدون Center أو Text
   }
 }

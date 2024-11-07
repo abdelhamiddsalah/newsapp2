@@ -79,7 +79,7 @@ class ListViewArticlesInHome extends StatelessWidget {
             
           }
           else if (state is NewsCubitInitial) {
-            return const LoadingWidgget(); // Show loading widget initially
+            return const LoadingWidget(); // Show loading widget initially
           } else {
             return const Center(child: Text('No Data')); // Fallback for other states
           }

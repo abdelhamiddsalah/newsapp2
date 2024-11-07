@@ -51,7 +51,7 @@ class DetailsViewBody extends StatelessWidget {
                                 onPressed: () {
                                   context.read<CartCubit>().addToCart(state.article);
                                   EasyLoading.dismiss();
-                                    EasyLoading.showSuccess('Added To Cart!');
+                                    EasyLoading.showSuccess('Added To BookMarks!');
                                 },
                               ),
                               const SizedBox(width: 10),
@@ -86,7 +86,7 @@ class DetailsViewBody extends StatelessWidget {
               ),
             );
           } else {
-            return const LoadingWidgget();
+            return const LoadingWidget();
           }
         },
       ),

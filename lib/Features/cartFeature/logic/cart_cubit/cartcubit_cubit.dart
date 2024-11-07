@@ -48,9 +48,9 @@ class CartCubit extends Cubit<CartcubitState> {
 
   List<CartItem> get cartItems => List.unmodifiable(_cartItems);
 
-  @override
-  Future<void> close() {
-    _cartBox.close();
-    return super.close();
-  }
+  //@override
+  //Future<void> close() {
+    //_cartBox.close();
+    //return super.close();
+  //}
 }

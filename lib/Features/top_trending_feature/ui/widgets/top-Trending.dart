@@ -2,6 +2,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:newsapp/Core/widgets/loadinwidget.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';
 
 class TopTrendingWidget extends StatelessWidget {
@@ -19,7 +20,7 @@ class TopTrendingWidget extends StatelessWidget {
           builder: (context, state) {
             if (state is GetTopNews) {
               return SizedBox(
-                height: size.height * 0.5,
+                height: size.height * 0.5, // تحديد ارتفاع ثابت
                 child: Swiper(
                   layout: SwiperLayout.STACK,
                   autoplay: true,
@@ -31,7 +32,7 @@ class TopTrendingWidget extends StatelessWidget {
                     final article = state.newslist.articles![index];
                     return InkWell(
                       onTap: () {
-                       
+                        // ضع هنا ما يحدث عند الضغط
                       },
                       child: Container(
                         color: Theme.of(context).cardColor,
@@ -65,7 +66,7 @@ class TopTrendingWidget extends StatelessWidget {
                             Row(
                               children: [
                                 IconButton(
-                                  onPressed: () {}, // Add your onPressed action here
+                                  onPressed: () {}, // ضع الإجراء المناسب هنا
                                   icon: Icon(
                                     Icons.link,
                                     color: Theme.of(context).textSelectionTheme.cursorColor,
@@ -82,7 +83,7 @@ class TopTrendingWidget extends StatelessWidget {
                 ),
               );
             } else {
-              return const Center(child: CircularProgressIndicator());
+              return const LoadingWidget();
             }
           },
         ),

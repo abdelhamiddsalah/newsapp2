@@ -81,7 +81,7 @@ class Revelncy extends StatelessWidget {
             ),
           );
         }
-        return const LoadingWidgget();
+        return const LoadingWidget();
       },
     );
   }

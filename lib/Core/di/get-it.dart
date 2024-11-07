@@ -14,7 +14,7 @@ Future<void> initGitIt() async {
   getIt.registerLazySingleton<Reponews>(() => Reponews(getIt<Api_Networking>()));
   getIt.registerFactory<NewsCubitCubit>(() => NewsCubitCubit(getIt<Reponews>()));
   getIt.registerFactory<ThemeCubitCubit>(() => ThemeCubitCubit());
-  getIt.registerLazySingleton<CartCubit>(() => CartCubit());
+  getIt.registerFactory<CartCubit>(() => CartCubit());
   getIt.registerLazySingleton<DetailsCubitCubit>(() => DetailsCubitCubit());
 }
 
