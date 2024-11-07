@@ -19,7 +19,7 @@ class _LoadingWidgetState extends State<LoadingWidget> {
     EasyLoading.show(status: 'Loading...');
     
     // قم بتنفيذ مهامك هنا
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(milliseconds: 2000));
     
     // إخفاء التحميل بعد الانتهاء
     EasyLoading.dismiss();

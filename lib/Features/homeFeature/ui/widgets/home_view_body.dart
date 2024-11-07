@@ -73,7 +73,7 @@ class HomeViewBody extends StatelessWidget {
                               ),
                             ),
                             const verticalspacing(height: 10),
-                            Expanded(child: const ListViewArticlesInHome()),
+                           const Expanded(child:  ListViewArticlesInHome()),
                           ],
                         ),
                       )

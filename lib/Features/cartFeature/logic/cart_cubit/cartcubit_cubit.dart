@@ -22,35 +22,27 @@ class CartCubit extends Cubit<CartcubitState> {
   final List<CartItem> _cartItems = [];
   late Box<CartItem> _cartBox;
 
-  // تحميل عناصر السلة من Hive عند بدء التطبيق
+
   void _loadCart() {
     _cartItems.addAll(_cartBox.values);
     emit(CartUpdated(List.unmodifiable(_cartItems)));
   }
 
-  // إضافة عنصر للسلة وتحديث Hive
+
   void addToCart(Articles article) {
     CartItem newItem = CartItem(article: article);
     _cartItems.add(newItem);
-    _cartBox.add(newItem); // حفظ في Hive
+    _cartBox.add(newItem);
     emit(CartUpdated(List.unmodifiable(_cartItems)));
   }
 
-  // إزالة عنصر من السلة وتحديث Hive
   void removeFromCart(CartItem item) {
     final index = _cartItems.indexOf(item);
     if (index != -1) {
       _cartItems.removeAt(index);
-      _cartBox.deleteAt(index); // حذف من Hive
+      _cartBox.deleteAt(index);
       emit(CartUpdated(List.unmodifiable(_cartItems)));
     }
   }
-
   List<CartItem> get cartItems => List.unmodifiable(_cartItems);
-
-  //@override
-  //Future<void> close() {
-    //_cartBox.close();
-    //return super.close();
-  //}
 }
