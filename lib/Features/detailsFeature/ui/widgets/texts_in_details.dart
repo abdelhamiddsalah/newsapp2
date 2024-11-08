@@ -1,6 +1,6 @@
 // lib/Widgets/article_section.dart
 import 'package:flutter/material.dart';
-import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
+import 'package:newsapp/Core/widgets/vertical_spacing.dart';
 
 class ArticleSection extends StatelessWidget {
   final String title;

@@ -5,6 +5,7 @@ class LoadingWidget extends StatefulWidget {
   const LoadingWidget({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _LoadingWidgetState createState() => _LoadingWidgetState();
 }
 
@@ -19,7 +20,7 @@ class _LoadingWidgetState extends State<LoadingWidget> {
     EasyLoading.show(status: 'Loading...');
     
     // قم بتنفيذ مهامك هنا
-    await Future.delayed(Duration(milliseconds: 2000));
+    await Future.delayed(const Duration(milliseconds: 2000));
     
     // إخفاء التحميل بعد الانتهاء
     EasyLoading.dismiss();

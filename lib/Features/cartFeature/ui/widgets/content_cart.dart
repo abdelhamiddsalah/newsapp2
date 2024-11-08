@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsapp/Core/Widgets/RecordingTime.dart';
-import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
-import 'package:newsapp/Core/widgets/rowInhomeinlistview.dart';
+import 'package:newsapp/Core/widgets/recording_time.dart';
+import 'package:newsapp/Core/widgets/row_in_home_in_listview.dart';
+import 'package:newsapp/Core/widgets/vertical_spacing.dart';
 import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
 import 'package:newsapp/Features/revelncyFeature/ui/widgets/imageinSorting.dart';
 

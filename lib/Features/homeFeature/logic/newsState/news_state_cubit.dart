@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:newsapp/Core/enums/ThemeStates.dart';
+import 'package:newsapp/Core/enums/theme_states.dart';
 
 part 'news_state_state.dart';
 

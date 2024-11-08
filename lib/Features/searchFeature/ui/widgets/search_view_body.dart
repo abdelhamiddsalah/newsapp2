@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:newsapp/Core/Enums/ThemeStates.dart';
+import 'package:newsapp/Core/enums/theme_states.dart';
 
 class SearchViewBody extends StatefulWidget {
   const SearchViewBody({super.key});

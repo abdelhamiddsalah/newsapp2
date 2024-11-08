@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:newsapp/Core/di/get-it.dart';
+import 'package:newsapp/Core/di/get_it.dart';
 import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
-import 'package:newsapp/Features/homeFeature/data/models/articleAdapter.dart';
-import 'package:newsapp/Features/homeFeature/data/models/cartitrmAdapter.dart';
+import 'package:newsapp/Features/homeFeature/data/models/article_adapter.dart';
+import 'package:newsapp/Features/homeFeature/data/models/cartitrm_adapter.dart';
 import 'package:newsapp/newsApp.dart';
 
 

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsapp/Core/Widgets/MainDrawer.dart';
-import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
-import 'package:newsapp/Core/enums/ThemeStates.dart';
+import 'package:newsapp/Core/enums/theme_states.dart';
+import 'package:newsapp/Core/widgets/main_drawer.dart';
+import 'package:newsapp/Core/widgets/vertical_spacing.dart';
 import 'package:newsapp/Features/homeFeature/logic/PageCubit/page_cubit_cubit.dart';
 import 'package:newsapp/Features/homeFeature/logic/newsState/news_state_cubit.dart';
-import 'package:newsapp/Features/homeFeature/ui/widgets/AppbarInhome.dart';
-import 'package:newsapp/Features/homeFeature/ui/widgets/DropDownInhome.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/PaesNumbersInhome.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/TitelsInHome.dart';
-import 'package:newsapp/Features/homeFeature/ui/widgets/listviewArticlesInHome.dart';
+import 'package:newsapp/Features/homeFeature/ui/widgets/appbar_in_home.dart';
+import 'package:newsapp/Features/homeFeature/ui/widgets/drop_down_in_home.dart';
+import 'package:newsapp/Features/homeFeature/ui/widgets/listview_articles_in_home.dart';
 import 'package:newsapp/Features/top_trending_feature/ui/topTrending_view.dart';
 
 class HomeViewBody extends StatelessWidget {

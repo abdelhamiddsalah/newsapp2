@@ -1,10 +1,10 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:newsapp/Core/Widgets/VerticalSpacing.dart';
-import 'package:newsapp/Core/widgets/recordingTime.dart';
+import 'package:newsapp/Core/widgets/recording_time.dart';
+import 'package:newsapp/Core/widgets/vertical_spacing.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/imageInHomeInlistview.dart';
-import 'package:newsapp/Core/widgets/rowInhomeinlistview.dart';
+import 'package:newsapp/Core/widgets/row_in_home_in_listview.dart';
 
 // ignore: camel_case_types
 class cardInHomeList extends StatelessWidget {

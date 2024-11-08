@@ -10,7 +10,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 class WebviewDetails extends StatefulWidget {
   final Articles article; // Pass the article itself
 
-  const WebviewDetails({Key? key, required this.article}) : super(key: key);
+  const WebviewDetails({super.key, required this.article});
 
   @override
   State<WebviewDetails> createState() => _WebviewDetailsState();

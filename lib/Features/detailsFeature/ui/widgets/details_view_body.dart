@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:newsapp/Core/Widgets/Loadinwidget.dart';
-import 'package:newsapp/Core/Widgets/MainDrawer.dart';
-import 'package:newsapp/Core/widgets/verticalSpacing.dart';
+import 'package:newsapp/Core/widgets/main_drawer.dart';
+import 'package:newsapp/Core/widgets/vertical_spacing.dart';
 import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
 import 'package:newsapp/Features/detailsFeature/logic/Details_cubit/details_cubit_cubit.dart';
-import 'package:newsapp/Features/detailsFeature/ui/widgets/IconInDetails.dart';
-import 'package:newsapp/Features/detailsFeature/ui/widgets/ImageInDetails.dart';
-import 'package:newsapp/Features/detailsFeature/ui/widgets/TextsInDetails.dart';
 import 'package:newsapp/Core/widgets/webview_article.dart';
+import 'package:newsapp/Features/detailsFeature/ui/widgets/icon_in_details.dart';
+import 'package:newsapp/Features/detailsFeature/ui/widgets/image_in_details.dart';
+import 'package:newsapp/Features/detailsFeature/ui/widgets/texts_in_details.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 
 class DetailsViewBody extends StatelessWidget {

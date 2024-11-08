@@ -4,7 +4,7 @@ import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 class StateInherted extends InheritedWidget {
   final Articles article;
 
-  StateInherted(this.article, {Key? key, required Widget child}) : super(key: key, child: child);
+  const StateInherted(this.article, {super.key, required super.child});
 
   @override
   bool updateShouldNotify(covariant StateInherted oldWidget) {
