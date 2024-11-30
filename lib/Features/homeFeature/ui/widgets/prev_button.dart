@@ -4,6 +4,8 @@ import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.d
 import 'package:newsapp/Features/homeFeature/logic/PageCubit/page_cubit_cubit.dart';
 
 class PrevButton extends StatelessWidget {
+  const PrevButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<PaginationCubit, int>(

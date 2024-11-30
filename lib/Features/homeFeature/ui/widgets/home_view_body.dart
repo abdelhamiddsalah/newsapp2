@@ -62,7 +62,7 @@ class HomeViewBody extends StatelessWidget {
                           children: [
                             BlocProvider(
                               create: (context) => PaginationCubit(),
-                              child:  PaginationWidget(),
+                              child:  const PaginationWidget(),
                             ),
                             const verticalspacing(height: 10),
                             const Align(
