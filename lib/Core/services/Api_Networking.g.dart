@@ -10,10 +10,8 @@ part of 'Api_Networking.dart';
 class ParseErrorLogger {
   void logError(Object error, StackTrace stackTrace, RequestOptions requestOptions) {
     // Implement your error logging logic here
-    print('Error occurred: $error');
-    print('Stack trace: $stackTrace');
-    print('Request: ${requestOptions.method} ${requestOptions.path}');
   }}
+// ignore: camel_case_types
 class _Api_Networking implements Api_Networking {
   _Api_Networking(
     this._dio, {
