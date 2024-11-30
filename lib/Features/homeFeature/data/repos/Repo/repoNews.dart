@@ -5,6 +5,7 @@ import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 
 
 class Reponews {
+  // ignore: non_constant_identifier_names
   final Api_Networking api_networking;
 
   Reponews( this.api_networking);
