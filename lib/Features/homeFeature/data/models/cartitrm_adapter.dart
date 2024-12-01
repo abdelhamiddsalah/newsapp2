@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
-import 'package:newsapp/features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
-import 'package:newsapp/features/homeFeature/data/models/mainnews.dart';
+import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
+import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 
 class CartItemAdapter extends TypeAdapter<CartItem> {
   @override
