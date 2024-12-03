@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:newsapp/Core/enums/theme_states.dart';
-
+import 'search_bars.dart';
+import 'search_results.dart';
 class SearchViewBody extends StatefulWidget {
   const SearchViewBody({super.key});
 
@@ -10,19 +9,23 @@ class SearchViewBody extends StatefulWidget {
 }
 
 class _SearchViewBodyState extends State<SearchViewBody> {
-  late TextEditingController textcontroller= TextEditingController();
- late FocusNode myFocusNode;
+  late TextEditingController textController;
+  late FocusNode myFocusNode;
+
   @override
   void initState() {
     super.initState();
+    textController = TextEditingController();
     myFocusNode = FocusNode();
   }
 
   @override
   void dispose() {
     myFocusNode.dispose();
+    textController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -33,51 +36,11 @@ class _SearchViewBodyState extends State<SearchViewBody> {
         child: Scaffold(
           body: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    IconButton(onPressed: (){
-                      myFocusNode.unfocus();
-                      Navigator.pop(context);    
-                    }, icon: const Icon(Icons.arrow_back_ios_new)),
-                    Flexible(child: TextField(
-                      focusNode: myFocusNode,
-                      controller: textcontroller,
-                      autofocus: true,
-                      textInputAction: TextInputAction.search,
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(hintText: 'Search', enabledBorder: InputBorder.none, focusedBorder: InputBorder.none,
-                      suffix: IconButton(onPressed: (){textcontroller.clear();setState(() {
-                        myFocusNode.unfocus();
-                      });}, icon: const Icon(Icons.close, color: Colors.red,)), contentPadding: const EdgeInsets.only(bottom: 8/5)  ),
-                    )),
-                  ],
-                ),
+              SearchBars(
+                textController: textController,
+                focusNode: myFocusNode,
               ),
-              Expanded(
-                child: MasonryGridView.count(
-                  itemCount: searchwords.length,
-                  crossAxisCount: 4,
-                  mainAxisSpacing: 4,
-                  crossAxisSpacing: 4,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      child: Container(
-                        margin: const EdgeInsets.all(4),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black),
-                          borderRadius: BorderRadius.circular(30)
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(searchwords[index], textAlign: TextAlign.center,),
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              )
+              Expanded(child: SearchResults()),
             ],
           ),
         ),
