@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:newsapp/Core/routes/routes.dart';
 import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
-import 'package:newsapp/Features/detailsFeature/ui/details_view.dart';
+import 'package:newsapp/Features/homeFeature/ui/details_view.dart';
 import 'package:newsapp/Features/cartFeature/ui/add_to_bookmarks.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';

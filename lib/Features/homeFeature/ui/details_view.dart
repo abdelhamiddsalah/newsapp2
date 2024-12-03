@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Features/detailsFeature/ui/widgets/details_view_body.dart';
 import 'package:newsapp/Features/homeFeature/data/models/mainnews.dart';
+import 'package:newsapp/Features/homeFeature/ui/widgets/details_view_body.dart';
 
 class DetailsView extends StatelessWidget {
   final Articles article;
