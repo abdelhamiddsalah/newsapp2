@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';
@@ -17,7 +19,7 @@ class PaginationWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          PrevButton(),
+          const PrevButton(),
           Expanded(
             child: BlocBuilder<PaginationCubit, int>(
               builder: (context, currentPage) {

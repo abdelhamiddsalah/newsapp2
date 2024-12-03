@@ -1,5 +1,6 @@
-// ignore: file_names
-import 'package:flutter/material.dart';
+// ignore_for_file: file_names
+
+import 'package:flutter/material.dart' show BorderRadius, BoxDecoration, BuildContext, Color, Container, EdgeInsets, FontWeight, StatelessWidget, Text, TextStyle, Theme, Widget;
 
 class TitelsInHome extends StatelessWidget {
   const TitelsInHome({

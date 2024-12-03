@@ -5,10 +5,10 @@ class SearchBars extends StatelessWidget {
   final FocusNode focusNode;
 
   const SearchBars({
-    Key? key,
+    super.key,
     required this.textController,
     required this.focusNode,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
