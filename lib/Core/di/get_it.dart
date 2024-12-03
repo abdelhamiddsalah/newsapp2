@@ -33,6 +33,5 @@ Dio createAndSetupDio() {
     responseHeader: false,
     error: true,
   ));
-
   return dio;
 }
