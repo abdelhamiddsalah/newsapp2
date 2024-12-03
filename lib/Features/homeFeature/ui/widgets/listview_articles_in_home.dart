@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsapp/core/Widgets/Loadinwidget.dart';
+import 'package:newsapp/Core/Widgets/Loadinwidget.dart';
 import 'package:newsapp/Features/detailsFeature/ui/details_view.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';
 import 'package:newsapp/Features/homeFeature/ui/widgets/card_in_home_list.dart';

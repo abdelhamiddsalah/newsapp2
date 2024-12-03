@@ -4,8 +4,8 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:newsapp/Core/routes/app_routes.dart';
 import 'package:newsapp/Core/routes/routes.dart';
 import 'package:newsapp/Core/styles/app_theme.dart';
-import 'package:newsapp/features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
-import 'package:newsapp/features/homeFeature/logic/theme_cubit/theme_cubit_cubit.dart';
+import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
+import 'package:newsapp/Features/homeFeature/logic/theme_cubit/theme_cubit_cubit.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

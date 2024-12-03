@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:newsapp/features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
-import 'package:newsapp/features/cartFeature/ui/widgets/content_cart.dart';
-import 'package:newsapp/features/cartFeature/ui/widgets/no_items_in_cart.dart';
+import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
+import 'package:newsapp/Features/cartFeature/ui/widgets/content_cart.dart';
+import 'package:newsapp/Features/cartFeature/ui/widgets/no_items_in_cart.dart';
 
 class CartView extends StatelessWidget {
   const CartView({super.key});

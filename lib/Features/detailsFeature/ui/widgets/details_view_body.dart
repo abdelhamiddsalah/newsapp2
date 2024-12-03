@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:newsapp/core/Widgets/Loadinwidget.dart';
-import 'package:newsapp/core/widgets/main_drawer.dart';
-import 'package:newsapp/core/widgets/vertical_spacing.dart';
-import 'package:newsapp/core/widgets/webview_article.dart';
+import 'package:newsapp/Core/Widgets/Loadinwidget.dart';
+import 'package:newsapp/Core/widgets/main_drawer.dart';
+import 'package:newsapp/Core/widgets/vertical_spacing.dart';
+import 'package:newsapp/Core/widgets/webview_article.dart';
 import 'package:newsapp/Features/cartFeature/logic/cart_cubit/cartcubit_cubit.dart';
 import 'package:newsapp/Features/detailsFeature/logic/Details_cubit/details_cubit_cubit.dart';
 import 'package:newsapp/Features/detailsFeature/ui/widgets/icon_in_details.dart';
