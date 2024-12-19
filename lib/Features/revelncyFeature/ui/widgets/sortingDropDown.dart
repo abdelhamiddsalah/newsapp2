@@ -6,9 +6,9 @@ import 'package:newsapp/Core/Widgets/Loadinwidget.dart';
 import 'package:newsapp/Core/widgets/main_drawer.dart';
 import 'package:newsapp/Core/widgets/recording_time.dart';
 import 'package:newsapp/Core/widgets/vertical_spacing.dart';
-import 'package:newsapp/Features/detailsFeature/ui/Details_view.dart';
 import 'package:newsapp/Features/homeFeature/logic/News_cubit/news_cubit_cubit.dart';
 import 'package:newsapp/Core/widgets/row_in_home_in_listview.dart';
+import 'package:newsapp/Features/homeFeature/ui/details_view.dart';
 import 'package:newsapp/Features/revelncyFeature/ui/widgets/imageinSorting.dart';
 
 class Revelncy extends StatelessWidget {
